@@ -1,3 +1,51 @@
 <resources>
     <string name="app_name">PanalSuite</string>
+
+    <!-- Login -->
+    <string name="login_subtitle">Gestiona tus solicitudes desde el celular</string>
+    <string name="label_email">Correo</string>
+    <string name="label_password">Contraseña</string>
+    <string name="action_login">Iniciar sesión</string>
+    <string name="cd_show_password">Mostrar contraseña</string>
+    <string name="cd_hide_password">Ocultar contraseña</string>
+    <string name="cd_app_logo">Logo de PanalSuite</string>
+    <string name="demo_users_title">Usuarios de prueba</string>
+    <string name="demo_users_hint">Toca un rol para completar los datos. Son cuentas ficticias.</string>
+
+    <!-- Validation errors -->
+    <string name="error_email_required">Ingresa tu correo</string>
+    <string name="error_email_invalid">El correo no tiene un formato válido</string>
+    <string name="error_password_required">Ingresa tu contraseña</string>
+    <string name="error_password_length">Debe tener al menos 8 caracteres</string>
+    <string name="error_password_digit">Debe incluir al menos un número</string>
+    <string name="error_invalid_credentials">Correo o contraseña incorrectos</string>
+
+    <!-- Roles -->
+    <string name="role_requester">Solicitante</string>
+    <string name="role_resolver">Resolutor</string>
+    <string name="role_supervisor">Supervisor</string>
+
+    <!-- Ticket status -->
+    <string name="status_open">Abierta</string>
+    <string name="status_in_progress">En progreso</string>
+    <string name="status_resolved">Resuelta</string>
+    <string name="status_closed">Cerrada</string>
+
+    <!-- Ticket priority -->
+    <string name="priority_low">Baja</string>
+    <string name="priority_medium">Media</string>
+    <string name="priority_high">Alta</string>
+    <string name="priority_critical">Crítica</string>
+
+    <!-- Ticket category -->
+    <string name="category_store">Tienda</string>
+    <string name="category_pharmacy">Farmacia</string>
+    <string name="category_supplier">Proveedor</string>
+    <string name="category_infrastructure">Infraestructura</string>
+    <string name="category_internal_support">Soporte interno</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Mi perfil</string>
+    <string name="label_role">Rol</string>
+    <string name="action_logout">Cerrar sesión</string>
 </resources>
