@@ -1,5 +1,6 @@
 package com.example.panalsuite.model
 
+import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import com.example.panalsuite.R
 
@@ -31,12 +32,28 @@ enum class Priority(@param:StringRes val labelRes: Int) {
     CRITICAL(R.string.priority_critical)
 }
 
-enum class Category(@param:StringRes val labelRes: Int) {
-    STORE(R.string.category_store),
-    PHARMACY(R.string.category_pharmacy),
-    SUPPLIER(R.string.category_supplier),
-    INFRASTRUCTURE(R.string.category_infrastructure),
-    INTERNAL_SUPPORT(R.string.category_internal_support)
+/** Each category is routed to the team that resolves that kind of problem. */
+enum class Category(
+    @param:StringRes val labelRes: Int,
+    @param:DrawableRes val iconRes: Int,
+    val team: String
+) {
+    STORE(R.string.category_store, R.drawable.ic_category_store, "Equipo Tiendas"),
+    PHARMACY(R.string.category_pharmacy, R.drawable.ic_category_pharmacy, "Equipo Farmacia"),
+    SUPPLIER(R.string.category_supplier, R.drawable.ic_category_supplier, "Compras y Abastecimiento"),
+    INFRASTRUCTURE(R.string.category_infrastructure, R.drawable.ic_category_infrastructure, "Mantención"),
+    INTERNAL_SUPPORT(R.string.category_internal_support, R.drawable.ic_category_support, "Mesa de Ayuda TI")
+}
+
+/** Branches (sucursales) where a ticket can be reported. */
+object Branches {
+    val all = listOf(
+        "Sucursal Alameda",
+        "Sucursal Providencia",
+        "Sucursal Maipú",
+        "Sucursal Ñuñoa",
+        "Bodega Central"
+    )
 }
 
 data class User(
@@ -71,6 +88,7 @@ data class Ticket(
     val requesterName: String,
     val resolverTeam: String,
     val assigneeEmail: String?,
+    val assigneeName: String? = null,
     val createdAt: Long,
     val updatedAt: Long,
     val comments: List<Comment> = emptyList(),
