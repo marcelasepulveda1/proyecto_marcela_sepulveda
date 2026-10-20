@@ -16,21 +16,23 @@ La API queda en `http://localhost:3000`. Desde el emulador de Android se accede 
 
 ## Endpoints
 
-| Método | Ruta | Descripción |
+| Método | Ruta | Uso en la app |
 |---|---|---|
 | GET | `/users?email={email}&password={password}` | Login: devuelve el usuario si las credenciales coinciden |
-| GET | `/tickets` | Lista todas las solicitudes |
-| GET | `/tickets?requesterId={id}` | Solicitudes de un solicitante |
+| GET | `/tickets` | Descarga las solicitudes para la bandeja |
 | GET | `/tickets/{id}` | Detalle de una solicitud |
 | POST | `/tickets` | Crea una solicitud |
-| PATCH | `/tickets/{id}` | Actualiza el estado de una solicitud |
+| PUT | `/tickets/{id}` | Actualiza una solicitud (estado, asignado e historial) |
+
+Los datos quedan guardados en `db.json`, así que los cambios hechos desde la app se mantienen al reiniciar el servidor.
 
 ## Usuarios de prueba
 
 | Rol | Correo | Contraseña |
 |---|---|---|
-| Solicitante | solicitante@panalsuite.cl | panal2026 |
-| Resolutor | resolutor@panalsuite.cl | panal2026 |
-| Supervisor | supervisor@panalsuite.cl | panal2026 |
+| Solicitante | solicitante@panalsuite.test | Demo1234 |
+| Resolutor | resolutor@panalsuite.test | Demo1234 |
+| Resolutor | resolutor2@panalsuite.test | Demo1234 |
+| Supervisor | supervisor@panalsuite.test | Demo1234 |
 
 Son cuentas ficticias, solo para pruebas.

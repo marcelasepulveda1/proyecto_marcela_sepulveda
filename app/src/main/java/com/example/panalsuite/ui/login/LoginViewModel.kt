@@ -12,7 +12,6 @@ import com.example.panalsuite.data.preferences.SessionManager
 import com.example.panalsuite.data.repository.AuthRepository
 import com.example.panalsuite.model.Role
 import com.example.panalsuite.util.Validators
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -90,7 +89,6 @@ class LoginViewModel(
 
         viewModelScope.launch {
             _uiState.update { it.copy(isLoading = true, loginError = null) }
-            delay(SIMULATED_NETWORK_DELAY_MS)
             val user = authRepository.login(state.email, state.password)
             if (user == null) {
                 _uiState.update { it.copy(isLoading = false, loginError = R.string.error_invalid_credentials) }
@@ -102,8 +100,6 @@ class LoginViewModel(
     }
 
     companion object {
-        private const val SIMULATED_NETWORK_DELAY_MS = 600L
-
         val Factory: ViewModelProvider.Factory = viewModelFactory {
             initializer {
                 val app = this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY] as PanalSuiteApp

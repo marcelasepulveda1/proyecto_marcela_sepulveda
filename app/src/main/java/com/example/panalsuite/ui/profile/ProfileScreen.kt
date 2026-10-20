@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -28,7 +27,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.panalsuite.R
+import com.example.panalsuite.data.remote.ApiClient
 import com.example.panalsuite.model.User
+import com.example.panalsuite.ui.components.HexagonShape
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -50,6 +51,11 @@ fun ProfileScreen(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             user?.let { ProfileCard(it) }
+            Text(
+                text = "${stringResource(R.string.profile_server)}: ${ApiClient.BASE_URL}",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
             OutlinedButton(
                 onClick = { viewModel.logout(onLoggedOut) },
                 modifier = Modifier.fillMaxWidth()
@@ -73,7 +79,7 @@ private fun ProfileCard(user: User) {
             Box(
                 modifier = Modifier
                     .size(72.dp)
-                    .clip(CircleShape)
+                    .clip(HexagonShape)
                     .background(MaterialTheme.colorScheme.primary),
                 contentAlignment = Alignment.Center
             ) {
