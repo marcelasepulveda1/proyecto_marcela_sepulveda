@@ -63,7 +63,7 @@ private fun PanalSuiteRoot(sessionManager: SessionManager) {
             val startDestination = remember {
                 if (state.user != null) HOME_ROUTE else Screen.Login.route
             }
-            AppNavGraph(startDestination = startDestination)
+            AppNavGraph(startDestination = startDestination, currentUser = state.user)
         }
     }
 }
