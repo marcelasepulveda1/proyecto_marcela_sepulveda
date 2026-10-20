@@ -1,0 +1,12 @@
+{
+  "name": "panalsuite-api",
+  "version": "1.0.0",
+  "description": "Mock REST API for PanalSuite (tickets and users)",
+  "private": true,
+  "scripts": {
+    "start": "json-server --watch db.json --host 0.0.0.0 --port 3000"
+  },
+  "devDependencies": {
+    "json-server": "0.17.4"
+  }
+}

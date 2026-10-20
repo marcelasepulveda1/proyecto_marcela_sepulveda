@@ -1,0 +1,15 @@
+{
+  "users": [
+    { "id": 1, "name": "Camila Rojas", "email": "solicitante@panalsuite.cl", "password": "panal2026", "role": "REQUESTER" },
+    { "id": 2, "name": "Diego Muñoz", "email": "resolutor@panalsuite.cl", "password": "panal2026", "role": "RESOLVER" },
+    { "id": 3, "name": "Valentina Soto", "email": "supervisor@panalsuite.cl", "password": "panal2026", "role": "SUPERVISOR" }
+  ],
+  "tickets": [
+    { "id": 1, "title": "Caja 3 no imprime boletas", "description": "La impresora térmica de la caja 3 no responde desde la apertura.", "category": "STORE", "priority": "HIGH", "status": "OPEN", "requesterId": 1, "resolverId": null, "createdAt": "2026-10-18T09:12:00", "updatedAt": "2026-10-18T09:12:00" },
+    { "id": 2, "title": "Quiebre de stock en paracetamol", "description": "El sistema muestra stock 0 pero hay cajas en bodega.", "category": "PHARMACY", "priority": "CRITICAL", "status": "IN_PROGRESS", "requesterId": 1, "resolverId": 2, "createdAt": "2026-10-17T15:40:00", "updatedAt": "2026-10-19T10:05:00" },
+    { "id": 3, "title": "Despacho atrasado de proveedor", "description": "El pedido semanal de bebidas no llegó en la fecha acordada.", "category": "SUPPLIER", "priority": "MEDIUM", "status": "OPEN", "requesterId": 1, "resolverId": null, "createdAt": "2026-10-19T08:30:00", "updatedAt": "2026-10-19T08:30:00" },
+    { "id": 4, "title": "Luz de bodega parpadea", "description": "El tubo fluorescente del pasillo 2 de bodega parpadea constantemente.", "category": "INFRASTRUCTURE", "priority": "LOW", "status": "RESOLVED", "requesterId": 1, "resolverId": 2, "createdAt": "2026-10-15T11:00:00", "updatedAt": "2026-10-16T17:20:00" },
+    { "id": 5, "title": "No puedo entrar al correo corporativo", "description": "Al iniciar sesión aparece el error de contraseña expirada.", "category": "INTERNAL_SUPPORT", "priority": "MEDIUM", "status": "CLOSED", "requesterId": 1, "resolverId": 2, "createdAt": "2026-10-12T09:45:00", "updatedAt": "2026-10-13T12:10:00" },
+    { "id": 6, "title": "Lector de código de barras falla", "description": "El lector de la caja 1 no lee productos refrigerados.", "category": "STORE", "priority": "HIGH", "status": "IN_PROGRESS", "requesterId": 1, "resolverId": 2, "createdAt": "2026-10-19T16:25:00", "updatedAt": "2026-10-20T09:00:00" }
+  ]
+}
