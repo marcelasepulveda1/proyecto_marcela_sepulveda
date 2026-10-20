@@ -36,4 +36,33 @@ class ValidatorsTest {
     fun validPassword_returnsNoError() {
         assertNull(Validators.validatePassword("Demo1234"))
     }
+
+    @Test
+    fun shortTitle_returnsShortError() {
+        assertEquals(R.string.error_title_short, Validators.validateTitle("Caja"))
+    }
+
+    @Test
+    fun validTitle_returnsNoError() {
+        assertNull(Validators.validateTitle("Caja 3 no imprime boletas"))
+    }
+
+    @Test
+    fun emptyDescription_returnsRequiredError() {
+        assertEquals(R.string.error_description_required, Validators.validateDescription("   "))
+    }
+
+    @Test
+    fun shortDescription_returnsShortError() {
+        assertEquals(R.string.error_description_short, Validators.validateDescription("No funciona"))
+    }
+
+    @Test
+    fun missingSelection_returnsGivenError() {
+        assertEquals(
+            R.string.error_category_required,
+            Validators.validateSelection(null, R.string.error_category_required)
+        )
+        assertNull(Validators.validateSelection("Sucursal Alameda", R.string.error_branch_required))
+    }
 }

@@ -48,4 +48,82 @@
     <string name="profile_title">Mi perfil</string>
     <string name="label_role">Rol</string>
     <string name="action_logout">Cerrar sesión</string>
+
+    <!-- Navigation -->
+    <string name="nav_inbox">Bandeja</string>
+    <string name="nav_create">Nueva</string>
+    <string name="nav_summary">Resumen</string>
+    <string name="nav_profile">Perfil</string>
+    <string name="cd_back">Volver</string>
+    <string name="cd_refresh">Sincronizar con el servidor</string>
+
+    <!-- Inbox -->
+    <string name="inbox_greeting">Hola, %1$s</string>
+    <string name="inbox_ticket_count">%1$d solicitudes en tu bandeja</string>
+    <string name="inbox_search_hint">Buscar por título, código o sucursal</string>
+    <string name="filter_all">Todas (%1$d)</string>
+    <string name="filter_status_count">%1$s (%2$d)</string>
+    <string name="inbox_empty_title">No hay solicitudes por aquí</string>
+    <string name="inbox_empty_message">Cuando existan solicitudes que coincidan con el filtro aparecerán en esta bandeja.</string>
+    <string name="offline_banner">Sin conexión con el servidor. Estás viendo los datos guardados en el teléfono.</string>
+    <string name="ticket_unassigned">Sin asignar</string>
+
+    <!-- Create ticket -->
+    <string name="create_title">Nueva solicitud</string>
+    <string name="create_intro">Cuéntanos qué pasó y la derivaremos al equipo indicado.</string>
+    <string name="label_title">Título</string>
+    <string name="label_description">Descripción</string>
+    <string name="label_category">Categoría</string>
+    <string name="label_priority">Prioridad</string>
+    <string name="label_branch">Sucursal</string>
+    <string name="char_counter">%1$d/%2$d</string>
+    <string name="create_team_hint">Se derivará a: %1$s</string>
+    <string name="action_create_ticket">Crear solicitud</string>
+    <string name="msg_ticket_created">Solicitud creada y enviada al servidor</string>
+    <string name="msg_ticket_saved_offline">Solicitud guardada en el teléfono. Se enviará al sincronizar.</string>
+
+    <!-- Ticket validation errors -->
+    <string name="error_title_required">Ingresa un título</string>
+    <string name="error_title_short">El título debe tener al menos 5 caracteres</string>
+    <string name="error_title_long">El título no puede superar los 60 caracteres</string>
+    <string name="error_description_required">Describe el problema</string>
+    <string name="error_description_short">La descripción debe tener al menos 15 caracteres</string>
+    <string name="error_description_long">La descripción no puede superar los 400 caracteres</string>
+    <string name="error_category_required">Selecciona una categoría</string>
+    <string name="error_branch_required">Selecciona una sucursal</string>
+
+    <!-- Ticket detail -->
+    <string name="detail_progress">Avance</string>
+    <string name="detail_information">Información</string>
+    <string name="detail_history">Historial</string>
+    <string name="detail_team">Equipo resolutor</string>
+    <string name="detail_requester">Solicitante</string>
+    <string name="detail_assignee">Asignado a</string>
+    <string name="detail_created">Creada</string>
+    <string name="detail_updated">Última actualización</string>
+    <string name="detail_not_found">No encontramos esta solicitud</string>
+    <string name="detail_history_created">Solicitud creada</string>
+    <string name="detail_history_change">%1$s → %2$s</string>
+    <string name="detail_history_meta">%1$s · %2$s</string>
+    <string name="detail_no_actions">No tienes acciones disponibles para esta solicitud.</string>
+    <string name="msg_status_updated">Estado actualizado</string>
+    <string name="msg_status_saved_offline">Cambio guardado en el teléfono. Se enviará al sincronizar.</string>
+
+    <!-- Workflow actions -->
+    <string name="action_take">Tomar solicitud</string>
+    <string name="action_resolve">Marcar como resuelta</string>
+    <string name="action_close">Confirmar y cerrar</string>
+    <string name="action_reopen">Reabrir</string>
+
+    <!-- Summary -->
+    <string name="summary_title">Resumen general</string>
+    <string name="summary_subtitle">%1$d solicitudes registradas</string>
+    <string name="summary_by_status">Por estado</string>
+    <string name="summary_by_priority">Por prioridad</string>
+    <string name="summary_by_category">Por categoría</string>
+    <string name="summary_critical_alert">%1$d solicitudes críticas siguen sin cerrar</string>
+    <string name="summary_no_critical">No hay solicitudes críticas pendientes</string>
+
+    <!-- Profile -->
+    <string name="profile_server">Servidor</string>
 </resources>
