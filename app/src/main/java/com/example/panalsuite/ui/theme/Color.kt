@@ -7,6 +7,8 @@ val Honey600 = Color(0xFFE09A00)
 val Honey200 = Color(0xFFFFD98A)
 val Honey100 = Color(0xFFFFEFC7)
 val HoneyDeep = Color(0xFF3D2A00)
+val HoneyBrown = Color(0xFF6B4A00)
+val Honey50 = Color(0xFFFFF8E6)
 
 val Slate900 = Color(0xFF1B2228)
 val Slate700 = Color(0xFF37474F)
