@@ -5,6 +5,13 @@ Aplicación Android para gestionar solicitudes internas (tickets) de una cadena 
 Proyecto del Parcial 2 de Desarrollo de Aplicaciones Móviles, Duoc UC.
 Autora: Marcela Sepúlveda Huircán.
 
+## Capturas
+
+| Bandeja de solicitudes | Detalle de una solicitud |
+|---|---|
+| <img src="docs/bandeja.png" width="260" alt="Bandeja"> | <img src="docs/detalle.png" width="260" alt="Detalle"> |
+| Saludo con el rol del usuario, buscador, filtros por estado y tarjetas con la prioridad en color. | Avance del estado con hexágonos, información de la solicitud e historial de cambios. |
+
 ## Funcionalidades
 
 - **Login con validación**: formato de correo, contraseña de mínimo 8 caracteres con al menos un número, y mensajes de error en cada campo.
